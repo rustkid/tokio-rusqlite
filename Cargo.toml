@@ -13,9 +13,11 @@ categories = ["asynchronous", "database"]
 
 [dependencies]
 crossbeam-channel = "0.5"
-rusqlite = "0.27"
+#rusqlite = "0.27"
+rusqlite = { git = "https://github.com/rusqlite/rusqlite", rev= "289a729" }
 tokio = { version = "1", features = ["sync"] }
 
 [dev-dependencies]
-rusqlite = { version = "0.27", features = ["bundled"] }
+#rusqlite = { version = "0.27", features = ["bundled"] }
+rusqlite = { git = "https://github.com/rusqlite/rusqlite", rev= "289a729", features = ["bundled"] }
 tokio = { version = "1", features = ["full"] }
